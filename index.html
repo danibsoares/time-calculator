@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de horas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="theme-component">
+
+        <section class="light-theme">
+            <section class="toggle">
+                <img src="./img/sun-vector.svg" alt="modo claro" class="sun">
+                <input type="checkbox" name="light-theme-toggle" id="light-theme-toggle">
+                <span class="slider-round"></span>
+                <img src="./img/moon-vector.svg" alt="modo escuro" class="moon">
+            </section>
+
+            <section class="main-card">
+                <h1>Calculadora de Horas</h1>
+                
+                <section class="input-time">
+                    <div class="time-card">
+                        <h2>Horas</h2>
+                        <input type="text" name="hora-1" id="hora-1" class="add-numero" for="hora-1">
+                        <input type="text" name="hora-2" id="hora-2" class="add-numero" for="hora-2">
+                    </div>
+            
+                    <div class="time-card">
+                        <h2>Minutos</h2>
+                        <input type="text" name="minuto-1" id="minuto-1" class="add-numero" for="min-1">
+                        <input type="text" name="minuto-2" id="minuto-2" class="add-numero" for="min-2">
+                    </div>
+                </section>
+
+                <div class="action-buttons">
+                    <button type="button" id="add">Somar</button>
+                    <button type="button" id="subtract">Subtrair</button>
+                    <button type="button" id="difference">Diferença</button>
+                </div>
+
+                <div class="result-container">
+                    <h2 class="result">Resultado</h2>
+                    <div class="result-box">
+                        <output name="result-display" class="result-display"></output>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <div class="result-buttons">
+                        <button type="button">Guardar resultado</button>
+                        <button type="reset">Limpar cálculo</button>
+                    </div>
+                    <input type="checkbox" name="always-save" id="save" class="always-save">Sempre guardar resultado
+                </div>
+            </section>
+        </section>
+
+        <section class="dark-theme" hidden>
+            <section class="toggle">
+                <img src="./img/dark-sun-vector.svg" alt="modo claro" class="sun">
+                <div class="toggle-card">
+                    <div class="toggle-btn"></div>
+                </div>
+                <img src="./img/dark-moon-vector.svg" alt="modo escuro" class="moon">
+            </section>
+
+            <section class="main-card">
+                <h1>Calculadora de Horas</h1>
+
+                <div class="time-card">
+                    <h3>Horas</h3>
+                    <input type="text" name="hora-1" id="hora-1">
+                    <input type="text" name="hora-2" id="hora-2">
+                </div>
+        
+                <div class="time-card">
+                    <h3>Minutos</h3>
+                    <input type="text" name="minuto-1" id="minuto-1">
+                    <input type="text" name="minuto-2" id="minuto-2">
+                </div>
+
+                <div class="action-buttons">
+                    <button type="button" id="add">Somar</button>
+                    <button type="button" id="subtract">Subtrair</button>
+                    <button type="button" id="difference">Diferença</button>
+                </div>
+
+                <div class="result-container">
+                    <h2 class="result">Resultado</h2>
+                    <output class="result-display"></output>
+                </div>
+
+                <div class="result-actions">
+                    <button type="button">Guardar resultado</button>
+                    <button type="reset">Limpar cálculo</button>
+                    <input type="checkbox" name="always-save" id="always-save">Sempre guardar resultado
+                </div>
+            </section>
+        </section>
+        
+    </section>
+
+</body>
+<script src="./script.js"></script>
+</html>
