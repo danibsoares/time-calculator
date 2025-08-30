@@ -1,0 +1,149 @@
+* {
+padding:0;
+margin:0;
+vertical-align:baseline;
+list-style:none;
+border:0;
+text-transform: uppercase;
+}
+
+:root{
+    --bold-font-weight: 800;
+    --semi-bold-font-weight: 700;
+    --regular-font-weight: 500;
+
+    --light-font-color: #678CAE;
+
+    --radius-15: 15px 15px 15px 15px;
+
+    --light-background: #E7E7E7;
+    --dark-background: #303030;
+
+    --light-up-card-shadow: 5px 5px 5px #AEAEC0, -5px -5px 15px #FFF;
+    --ligt-down-card-shadow: -2px -2px 5px #FFF inset, 2px 2px 5px #AEAEC0 inset;
+}
+
+body {
+    background-color: var(--light-background);
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--light-font-color);
+    box-sizing: border-box;
+}
+
+.main-card{
+    border-radius: var(--radius-15);
+    padding: 30px;
+    box-shadow: var(--light-up-card-shadow);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 728px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: var(--bold-font-weight);
+}
+
+h2{
+    font-size: 24px;
+    font-weight: var(--semi-bold-font-weight);
+}
+
+.input-time{
+    display: flex;
+    padding: 30px;
+    gap: 60px;
+}
+
+.time-card{
+    border-radius: var(--radius-15);
+    padding-top: 15px;
+    box-shadow: var(--light-up-card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 268px;
+    height: 229px;
+}
+
+.add-numero{
+    background-color: var(--light-background);
+    border-radius: 20px 20px 20px 20px;
+    width: 200px;
+    height: 51px;
+    box-shadow: var(--ligt-down-card-shadow);
+    color: var(--light-font-color);
+    font-size: 25px;
+    font-weight: var(--semi-bold-font-weight);
+    text-align: center;
+    outline-color: var(--light-font-color);
+    outline-offset: -5px;
+}
+
+.action-buttons{
+    width: 670px;
+    height: 71px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    width: 174px;
+    height: 71px;
+    border-radius: var(--radius-15);
+    background-color: var(--light-background);
+    box-shadow: var(--light-up-card-shadow);
+    color: var(--light-font-color);
+    font-size: 19px;
+    font-weight: var(--semi-bold-font-weight);
+}
+
+.result-container{
+    padding: 28px;
+    width: 590px;
+    height: 109px;
+}
+
+.result-box{
+    border-radius: var(--radius-15);
+    background-color: var(--light-background);
+    box-shadow: var(--light-up-card-shadow);
+    color: var(--light-font-color);
+    font-size: 19px;
+    width: 590px;
+    height: 71px;
+    box-shadow: var(--ligt-down-card-shadow);
+    margin-top: 10px;
+}
+
+.result-actions{
+    width: 596px;
+}
+
+.result-actions button{
+    width: 250px;
+    height: 52px;
+}
+
+.result-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.always-save{
+    margin-top: 25px;
+}
+
+.always-save input[type=checkbox]{
+    cursor: pointer;
+}
+
+input[type=checkbox]::before{
+
+}
