@@ -1,3 +1,7 @@
+/* Importação de fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset CSS */
 * {
 padding:0;
 margin:0;
@@ -5,14 +9,17 @@ vertical-align:baseline;
 list-style:none;
 border:0;
 text-transform: uppercase;
+font-family: "Roboto Condensed", sans-serif;
 }
 
+/* Variáveis */
 :root{
     --bold-font-weight: 800;
     --semi-bold-font-weight: 700;
     --regular-font-weight: 500;
-
+    
     --light-font-color: #678CAE;
+    --dark-font-color: #A6B8C5;
 
     --radius-15: 15px 15px 15px 15px;
 
@@ -20,28 +27,15 @@ text-transform: uppercase;
     --dark-background: #303030;
 
     --light-up-card-shadow: 5px 5px 5px #AEAEC0, -5px -5px 15px #FFF;
-    --ligt-down-card-shadow: -2px -2px 5px #FFF inset, 2px 2px 5px #AEAEC0 inset;
+    --light-down-card-shadow: -2px -2px 5px #FFF inset, 2px 2px 5px #AEAEC0 inset;
+    
+    --dark-up-card-shadow: 5px 5px 5px #000000, -5px -5px 15px #4B4E52;
+    --dark-down-card-shadow: -2px -2px 5px #4B4E52 inset, 2px 2px 5px #000000 inset;
 }
 
-body {
-    background-color: var(--light-background);
-    display: flex;
-    justify-content: center;
-    font-family: "Roboto Condensed", sans-serif;
-    color: var(--light-font-color);
-    box-sizing: border-box;
-}
-
-.main-card{
-    border-radius: var(--radius-15);
-    padding: 30px;
-    box-shadow: var(--light-up-card-shadow);
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    width: 728px;
+/* Configurações gerais */
+body section[hidden] {
+    display: none;
 }
 
 h1{
@@ -60,7 +54,64 @@ h2{
     gap: 60px;
 }
 
-.time-card{
+.action-buttons{
+    width: 670px;
+    height: 71px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.result-container{
+    padding: 28px;
+    width: 590px;
+    height: 109px;
+}
+
+.result-actions{
+    width: 596px;
+}
+
+.result-buttons-area{
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-buttons-area .result-buttons{
+    width: 230px;
+    height: 51px;
+}
+
+.always-save{
+    margin-top: 25px;
+}
+
+.always-save input[type=checkbox]{
+    cursor: pointer;
+}
+
+/* Tema claro */
+body .light-theme{
+    background-color: var(--light-background);
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--light-font-color);
+    box-sizing: border-box;
+}
+
+.light-theme .main-card{
+    border-radius: var(--radius-15);
+    padding: 30px;
+   box-shadow: var(--light-up-card-shadow);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 728px;
+}
+
+.light-theme .time-card{
     border-radius: var(--radius-15);
     padding-top: 15px;
     box-shadow: var(--light-up-card-shadow);
@@ -72,12 +123,12 @@ h2{
     height: 229px;
 }
 
-.add-numero{
+.light-theme .add-numero{
     background-color: var(--light-background);
     border-radius: 20px 20px 20px 20px;
     width: 200px;
     height: 51px;
-    box-shadow: var(--ligt-down-card-shadow);
+    box-shadow: var(--light-down-card-shadow);
     color: var(--light-font-color);
     font-size: 25px;
     font-weight: var(--semi-bold-font-weight);
@@ -86,14 +137,7 @@ h2{
     outline-offset: -5px;
 }
 
-.action-buttons{
-    width: 670px;
-    height: 71px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-button{
+.light-theme button{
     width: 174px;
     height: 71px;
     border-radius: var(--radius-15);
@@ -104,13 +148,7 @@ button{
     font-weight: var(--semi-bold-font-weight);
 }
 
-.result-container{
-    padding: 28px;
-    width: 590px;
-    height: 109px;
-}
-
-.result-box{
+.light-theme .result-box{
     border-radius: var(--radius-15);
     background-color: var(--light-background);
     box-shadow: var(--light-up-card-shadow);
@@ -118,32 +156,78 @@ button{
     font-size: 19px;
     width: 590px;
     height: 71px;
-    box-shadow: var(--ligt-down-card-shadow);
+    box-shadow: var(--light-down-card-shadow);
     margin-top: 10px;
 }
 
-.result-actions{
-    width: 596px;
-}
+/* Tema escuro */
 
-.result-actions button{
-    width: 250px;
-    height: 52px;
-}
-
-.result-buttons{
+body .dark-theme{
+    background-color: var(--dark-background);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--dark-font-color);
+    box-sizing: border-box;
 }
 
-.always-save{
-    margin-top: 25px;
+.dark-theme .main-card{
+    border-radius: var(--radius-15);
+    padding: 30px;
+    box-shadow: var(--dark-up-card-shadow);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 728px;
 }
 
-.always-save input[type=checkbox]{
-    cursor: pointer;
+.dark-theme .time-card{
+    border-radius: var(--radius-15);
+    padding-top: 15px;
+    box-shadow: var(--dark-up-card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 268px;
+    height: 229px;
 }
 
-input[type=checkbox]::before{
+.dark-theme .add-numero{
+    background-color: var(--dark-background);
+    border-radius: 20px 20px 20px 20px;
+    width: 200px;
+    height: 51px;
+    box-shadow: var(--dark-down-card-shadow);
+    color: var(--dark-font-color);
+    font-size: 25px;
+    font-weight: var(--semi-bold-font-weight);
+    text-align: center;
+    outline-color: var(--dark-font-color);
+    outline-offset: -5px;
+}
 
+.dark-theme button{
+    width: 174px;
+    height: 71px;
+    border-radius: var(--radius-15);
+    background-color: var(--dark-background);
+    box-shadow: var(--dark-up-card-shadow);
+    color: var(--dark-font-color);
+    font-size: 19px;
+    font-weight: var(--semi-bold-font-weight);
+}
+
+.dark-theme .result-box{
+    border-radius: var(--radius-15);
+    background-color: var(--dark-background);
+    box-shadow: var(--dark-up-card-shadow);
+    color: var(--dark-font-color);
+    font-size: 19px;
+    width: 590px;
+    height: 71px;
+    box-shadow: var(--dark-down-card-shadow);
+    margin-top: 10px;
 }
