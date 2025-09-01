@@ -34,8 +34,29 @@ font-family: "Roboto Condensed", sans-serif;
 }
 
 /* Configurações gerais */
-body section[hidden] {
-    display: none;
+.body-light, .body-dark{
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Condensed", sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--light-background);
+}
+
+.toggle{
+    display: flex;
+    justify-content: end;
+}
+
+.toggle-light, .toggle-dark{
+    width: 110.75px;
+    height: 28.12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: red;
 }
 
 h1{
@@ -91,18 +112,15 @@ h2{
 
 /* Tema claro */
 body .light-theme{
-    background-color: var(--light-background);
-    display: flex;
-    justify-content: center;
-    font-family: "Roboto Condensed", sans-serif;
     color: var(--light-font-color);
-    box-sizing: border-box;
+    background-color: var(--light-background);
 }
 
 .light-theme .main-card{
+    background-color: var(--light-background);
     border-radius: var(--radius-15);
     padding: 30px;
-   box-shadow: var(--light-up-card-shadow);
+    box-shadow: var(--light-up-card-shadow);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -161,7 +179,6 @@ body .light-theme{
 }
 
 /* Tema escuro */
-
 body .dark-theme{
     background-color: var(--dark-background);
     display: flex;
